@@ -1,0 +1,214 @@
+---
+
+---
+
+// Customization Variables
+
+$max-width: 740px;
+$med-width: 600px;
+$small-width: 480px;
+
+$accent-light: #8A59F1;
+$accent-dark: #B19CD8;
+
+$black: #121212;
+$white: #FFFFFF;
+
+$sec-white: #F8F8F8;
+$sec-black: #272727;
+
+$btn-dark: #272727;
+$btn-white: #FFFFFF;
+
+
+
+// Basic
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial;
+    height: 100%;
+    color: $black;
+    background-color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-light;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    margin: 18px 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+select:focus, button:focus, input:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+
+// divs
+
+.container {
+    max-width: $max-width;
+    margin: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+// Navbar
+
+#site-title {
+    font-size: 38px;
+    color: $black;
+    display: inline-block;
+}
+
+.navbar {
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+
+// Search
+
+#search {
+    width: 140px;
+    height: 40px;
+    margin: 10px;
+    font-family: "Roboto", Arial;
+    text-align:center;
+    border-radius: 5px;
+    background: $btn-white;
+    color: $black;
+    border: none;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+#searchterm {
+    width: 90%;
+    margin: 50px auto;
+    font-family: "Roboto", Arial;
+    border: none;
+    border-bottom: 2px solid $black;
+    font-size: 18px;
+}
+
+#filetype {
+    width: 140px;
+    height: 40px;
+    margin: 10px;
+    text-align:center;
+    font-family: "Roboto", Arial;
+    border-radius: 5px;
+    background: $btn-white;
+    color: $black;
+    border: none;
+    padding: 0 8px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+
+// footer
+
+.footer{
+    margin: 36px auto;
+    max-width: 300px;
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+    background: $sec-white;
+    border-radius: 20px;
+}
+
+
+// Mobile
+
+@media (max-width: 800px) {
+    .container {
+        max-width: $med-width;
+        transition: 0.3s ease all;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        max-width: 83%;
+    }
+}
+
+@media (max-width: 500px) {
+    #site-title {
+        width: 100%;
+        float: none;
+    }
+}
+
+//  typography
+
+.content { line-height: 2; }
+
+
+// Dark theme
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        color: $white;
+        background-color: $black;
+    }
+
+    a {
+        color: $accent-dark;
+    }
+
+    .footer{
+        background: $sec-black;
+    }
+
+    hr {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #site-title {
+        color: $white;
+    }
+
+    #search {
+        background: $btn-dark;
+        color: $white;
+        box-shadow: 0 3px 10px #000;
+    }
+
+    #searchterm {
+        border-bottom: 2px solid $white;
+        background: $black;
+        color: $white;
+    }
+
+    #filetype {
+        background: $btn-dark;
+        color: $white;
+        box-shadow: 0 3px 10px #000;
+    }
+}
